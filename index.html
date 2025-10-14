@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PoPP HOUK 2028 — Coming Soon</title>
+  <meta name="description" content="#HoukPopp2028 — a movement from the future with a heart for the 90's web. Nostalgic ASCII teaser." />
+  <meta property="og:title" content="PoPP HOUK 2028 — Coming Soon" />
+  <meta property="og:description" content="#HoukPopp2028 — a movement from the future with a heart for the 90's web. Nostalgic ASCII teaser." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://popphouk2028.com" />
+  <meta name="theme-color" content="#0b0f0c" />
+  <style>
+    :root {
+      --bg: #0b0f0c;      /* terminal black */
+      --fg: #c7f464;      /* phosphor green */
+      --link: #7fdbff;    /* retro cyan */
+      --accent: #ffb86c;  /* amber */
+      --dim: #6aa84f;     /* dim green */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.4 "Courier New", Courier, monospace;
+      text-shadow: 0 0 2px rgba(199,244,100,0.35);
+      overflow-x: hidden;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 24px 16px 80px; position: relative; }
+
+    /* CRT scanline + glow */
+    .crt::before, .crt::after {
+      content: ""; position: fixed; left: 0; right: 0; top: 0; bottom: 0; pointer-events: none;
+    }
+    .crt::before { background: repeating-linear-gradient( to bottom, rgba(255,255,255,0.04) 0, rgba(255,255,255,0.04) 1px, transparent 2px ); mix-blend-mode: overlay; }
+    .crt::after { box-shadow: inset 0 0 120px rgba(199,244,100,0.12); }
+
+    /* Vintage header bar */
+    .topbar { border: 1px solid var(--dim); padding: 6px 10px; display: flex; gap: 12px; align-items: center; background: rgba(20,28,22,0.6); }
+    .led { width: 8px; height: 8px; border-radius: 50%; background: #2e7d32; box-shadow: 0 0 6px #2e7d32; }
+    .led.on { background: #76ff03; box-shadow: 0 0 10px #76ff03; animation: blink 2s steps(2,end) infinite; }
+    @keyframes blink { 50% { opacity: .45; } }
+    .title { flex: 1; }
+    .btn { border: 1px solid var(--dim); padding: 4px 10px; cursor: pointer; background: transparent; color: var(--fg); font: inherit; }
+    .btn:active { transform: translateY(1px); }
+
+    /* Marquee (CSS, no <marquee>) */
+    .marquee { overflow: hidden; white-space: nowrap; border: 1px dashed var(--dim); margin: 16px 0; padding: 6px 8px; }
+    .marquee span { display: inline-block; padding-left: 100%; animation: slide 18s linear infinite; }
+    @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+
+    /* ASCII block */
+    pre { margin: 0; }
+    .ascii { border: 1px solid var(--dim); padding: 16px; background: rgba(18,24,20,0.5); overflow: auto; }
+
+    .section { margin: 22px 0; }
+    .hr { height: 1px; background: linear-gradient(90deg, transparent, var(--dim), transparent); margin: 18px 0; }
+
+    .list ul { padding-left: 18px; margin: 8px 0; }
+    .list li { margin: 6px 0; }
+
+    .cta { display: inline-block; border: 1px solid var(--dim); padding: 8px 12px; background: rgba(18,24,20,0.5); }
+
+    .under { font-weight: bold; color: var(--accent); }
+
+    /* Footer */
+    footer { margin-top: 32px; border: 1px solid var(--dim); padding: 12px; background: rgba(18,24,20,0.5); }
+
+    /* Responsive tweak */
+    @media (max-width: 520px) {
+      .ascii { font-size: 12px; }
+    }
+  </style>
+</head>
+<body class="crt">
+  <div class="wrap" role="main">
+    <div class="topbar" aria-label="status bar">
+      <div class="led on" title="System Online"></div>
+      <div class="title">POPPhouk2028 // Node: <span id="node">eu-ams01</span> // Mode: <span id="mode">CRT</span></div>
+      <button class="btn" id="themeBtn" aria-pressed="false" aria-label="Toggle theme">[ toggle_phosphor ]</button>
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <span>*** WELCOME TO THE FUTURE, RENDERED IN 1997 *** #HoukPopp2028 *** system: online *** policy: data_not_drama *** </span>
+    </div>
+
+    <div class="ascii" aria-label="ASCII site header">
+<pre>
+ ___________________________________________________________________________
+|                                                                           |
+|   ____   ____   ____   ____        __   __              __   __    ___    |
+|  |  _ \ |  _ \ |  _ \ |  _ \      / /  / /  ___  ____ / /  / /   / _ \   |
+|  | |_) || |_) || |_) || |_) |    / /  / /  / _ \|_  / /   / /   | | | |  |
+|  |  __/ |  __/ |  __/ |  __/    / /  / /__| (_) |/ / /___/ /___ | |_| |  |
+|  |_|    |_|    |_|    |_|      /_/  /_____/\___//___/____/____(_)\___/   |
+|                                                                           |
+|                   P  O  P  P    H  O  U  K      2  0  2  8                |
+|___________________________________________________________________________|
+
+:: COMING SOON ::
+
+  We kept the soul of dial‑up alive. Text beats pixels. Signal > noise.
+  A campaign built like a garage‑startup: fast, curious, human.
+
+  > “Fourteen years overseas didn’t distance us from America —
+     it prepared us to help America lead again.”
+</pre>
+    </div>
+
+    <div class="section list" aria-label="Quick facts">
+      <div class="hr" role="separator"></div>
+      <strong>QUICK FACTS_</strong>
+      <ul>
+        <li>Style: ASCII • Era: 90's • Mood: Optimistic minimalism</li>
+        <li>Platform: Open web • No trackers • 100% text‑first</li>
+        <li>Mission: Rebuild trust • Redefine leadership • Reignite curiosity</li>
+      </ul>
+      <div class="hr" role="separator"></div>
+    </div>
+
+    <div class="section" aria-label="Call to action">
+      <span class="cta">[ <a href="mailto:press@popphouk2028.com?subject=Media%20Inquiry%20—%20PoPP%20Houk%202028">press@popphouk2028.com</a> ]</span>
+      <span class="cta" id="copyCta" role="button" tabindex="0" aria-label="Copy email">[ copy_email ]</span>
+      <span class="cta">[ <a href="#changelog">changelog.txt</a> ]</span>
+      <span class="cta">[ <a href="#manifesto">manifesto.nfo</a> ]</span>
+    </div>
+
+    <div id="manifesto" class="section" aria-label="Manifesto">
+      <strong>MANIFESTO.NFO</strong>
+      <pre>
+01  We are not red or blue. We are the algorithmic gray that ships working ideas.
+02  Privacy + Innovation aren't enemies. Code policy like product, test in public.
+03  Healthcare, education, and dignity are infrastructure. Treat them as such.
+04  AI should be audited like finance and built like open source.
+05  Leadership is a changelog, not a press release. Iterate.
+      </pre>
+    </div>
+
+    <div id="changelog" class="section" aria-label="Changelog">
+      <strong>CHANGELOG.TXT</strong>
+      <pre>
+[2025-10-14] v0.1.0  initial ASCII drop • CRT mode • marquee • mailto
+[2025-10-14] v0.1.1  accessibility pass • keyboard copy • meta tags
+      </pre>
+    </div>
+
+    <div class="section" aria-live="polite" aria-atomic="true">
+      <div class="hr" role="separator"></div>
+      <span class="under">UNDER CONSTRUCTION</span>
+<pre>
+           ____
+          /___/\_
+         _\   \/_/\__   *tap tap* is this thing on?*
+       __\       \/_/\
+       \   _  .---.  \
+        \ /_\ |o o|   \
+         \/__\|_O_|    \    ~ come back soon for the full site ~
+         /\   \_/       /
+        /__\           /
+        \__/----------'
+</pre>
+    </div>
+
+    <footer>
+      <div><strong>Contact:</strong></div>
+      <div>Media Relations – #HoukPopp2028</div>
+      <div><a href="mailto:press@popphouk2028.com">press@popphouk2028.com</a></div>
+      <div><a href="https://www.popphouk2028.com">www.popphouk2028.com</a></div>
+    </footer>
+  </div>
+
+  <script>
+    (function(){
+      const root = document.documentElement;
+      const btn = document.getElementById('themeBtn');
+      const node = document.getElementById('node');
+      const copy = document.getElementById('copyCta');
+
+      // Simple theme toggle: green-on-black <-> amber-on-dark
+      let amber = false;
+      btn.addEventListener('click', () => {
+        amber = !amber;
+        if (amber) {
+          root.style.setProperty('--fg', '#ffb86c');
+          root.style.setProperty('--dim', '#c49b66');
+          root.style.setProperty('--link', '#ffd1a1');
+          document.getElementById('mode').textContent = 'AMBER';
+        } else {
+          root.style.setProperty('--fg', '#c7f464');
+          root.style.setProperty('--dim', '#6aa84f');
+          root.style.setProperty('--link', '#7fdbff');
+          document.getElementById('mode').textContent = 'CRT';
+        }
+      });
+
+      // fun node label rotator
+      const nodes = ['eu-ams01','us-nyc01','eu-ber02','us-sfo02','gov-dc00'];
+      let idx = 0; setInterval(()=>{ idx=(idx+1)%nodes.length; node.textContent = nodes[idx]; }, 4000);
+
+      // copy email
+      function copyEmail(){
+        const email = 'press@popphouk2028.com';
+        navigator.clipboard && navigator.clipboard.writeText(email).then(()=>{
+          copy.textContent = '[ copied ✓ ]';
+          setTimeout(()=> copy.textContent='[ copy_email ]', 1800);
+        }).catch(()=>{
+          window.location.href = 'mailto:'+email;
+        });
+      }
+      copy.addEventListener('click', copyEmail);
+      copy.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' ') { e.preventDefault(); copyEmail(); } });
+    })();
+  </script>
+
+  <noscript>
+    <div style="color:#ffb86c; padding: 8px; border: 1px solid #c49b66; margin: 12px; font-family: 'Courier New', monospace;">
+      JS disabled. You are truly from the 90's. Respect.
+    </div>
+  </noscript>
+</body>
+</html>
